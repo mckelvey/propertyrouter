@@ -1,0 +1,40 @@
+{
+    "name": "mckelvey/property-router",
+    "description": "Parses URL to provide for dynamic property searches.",
+    "type": "craft-plugin",
+    "version": "1.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "property router"
+    ],
+    "support": {
+        "docs": "https://github.com/mckelvey/property-router/blob/master/README.md",
+        "issues": "https://github.com/mckelvey/property-router/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David McKelvey",
+            "homepage": "https://sitesmade4people.co"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "mckelvey\\propertyrouter\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Property Router",
+        "handle": "property-router",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/mckelvey/property-router/master/CHANGELOG.md",
+        "class": "mckelvey\\propertyrouter\\PropertyRouter"
+    }
+}
