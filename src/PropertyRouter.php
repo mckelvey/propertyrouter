@@ -45,7 +45,7 @@ class PropertyRouter extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '1.1.0';
+    public $schemaVersion = '1.1.1';
 
     // Public Methods
     // =========================================================================
@@ -80,13 +80,15 @@ class PropertyRouter extends Plugin
             UrlManager::class,
             UrlManager::EVENT_REGISTER_SITE_URL_RULES,
             function (RegisterUrlRulesEvent $event) {
-                $types = array();
                 $property_types = Category::find()
                     ->group('propertyTypes')
                     ->all();
-                foreach ((array) $property_types as $type) {
-                  array_push($types, str_replace(' ', '-', $type->title));
-                }
+                $types = array_map(
+                    function($type) {
+                        return $type->slug;
+                    },
+                    (array) $property_types
+                );
                 $types = strtolower(implode('|', $types));
                 $term_pattern = '(for-sale|for-lease)+';
                 $types_pattern = '((' . $types . ')+(,(' . $types . ')+)*)+';
