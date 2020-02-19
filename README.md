@@ -2,8 +2,6 @@
 
 Parses URL to provide for dynamic property searches.
 
-![Screenshot](resources/img/plugin-logo.png)
-
 ## Requirements
 
 This plugin requires Craft CMS 3.0.0-beta.23 or later.
@@ -24,20 +22,18 @@ To install the plugin, follow these instructions.
 
 ## Property Router Overview
 
--Insert text here-
+This plugin uses a Craft category to build dynamic routes for a property list template.
 
 ## Configuring Property Router
 
--Insert text here-
+There isn’t a lot to configure unless you’re a dev. This would only be useful as a guide.
 
 ## Using Property Router
 
--Insert text here-
+Once installed, the dynamic routes are available for use on the selected base path/template.
 
 ## Property Router Roadmap
 
-Some things to do, and ideas for potential features:
-
-* Release it
+There is no roadmap here. Unless there is some huge (and unexpected) upwelling of interest to provide configuration options here, this plugin will probably only receive maintenance releases.
 
 Brought to you by [David McKelvey](https://sitesmade4people.co)
